@@ -1,0 +1,324 @@
+/* 
+Body:
+-Position of the body
+-Nice font family*/
+body{
+    font-family: 'Caveat', sans-serif;
+    position: relative;
+/*
+    background: url(image/test.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+*/
+}
+
+/*
+Video:
+- Set the video as backgroung, make it fixed.
+- Make sure it appers behind all elements.
+- make it spread across the whole webpage. 
+*/
+#backgroungVideo{
+ position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
+/* 
+Video does not work in small devices:
+-Hide the video and set picture as background (use media queries)
+-make it spread accross the whole webpage 
+*/
+@media (max-device-width: 768px){
+    body{
+        background: url(image/pexels-pixabay-373543.jpg) center center fixed;
+        background-size: cover;
+    }
+    #bgvideo{
+        display: :none;
+    }
+}
+/*
+Style the home section and elements inside it:
+-reduce the margin-buttom of h1 & h2.
+-style the button and its hover state.
+*/
+#home{
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding-top: 15%;
+}
+#home h1{
+   margin-bottom: 30px; 
+}
+#home h2{
+   margin-bottom: 50px;
+   font-size: 30px;
+}
+
+#home .btn{
+    background-color: #0d222b;
+    color: white;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 8px 20px;
+}
+
+#home .btn:hover{
+    background-color: rgba(13, 34, 43 ,0.5);
+}
+
+/*
+Style the About section:
+- add padding-top so that the nav link is active before the 
+carousel hits the top border of the page
+-limit its width in big devices to 1000px 
+- make headings bold and set the dimensions of pictures 
+*/
+.container{
+    max-width: 1000px;
+    
+}
+#about{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+#about h2{
+/*    font-weight: bold;*/
+    font-style: italic;
+    margin-bottom: 40px;
+}
+#about p{
+    font-size: 30px;
+}
+.aboutImage{
+    height: 120px;
+}
+
+/*
+style the promise section:
+- add padding-top for early activation of the nav link.
+- set the width of the carousel and center it
+- set the height of pictures and center them inside the carousel items.
+- Move the carousel caption under the pictures.
+*/
+#promise{
+    padding-top: 100px;
+}
+
+#myCarousel{
+    width: 60%;
+    margin: 0 auto;
+}
+.carousel-inner .item img{
+    height: 400px;
+    margin: 0 auto;
+}
+
+.carousel-caption{
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
+}
+/*
+style the picture and nv brand for different screens
+*/
+@media (max-width: 768px){
+    .carousel-inner .item img{
+        height: 300px;
+    }
+    .carousel-inner h2{
+        font-size: 23px; 
+    }
+}
+@media (max-width: 400px){
+    .carousel-inner .item img{
+        height: 200px;
+    }
+    .carousel-inner h2{
+        font-size: 17px; 
+    }
+    .navbar-brand{
+        font-size: 12px;
+    }
+}
+
+
+/*style the footer*/
+.footer{
+    background-color: rgba(13, 34, 43 ,0.5);
+    padding: 10px 0;
+    color: white;
+    margin-top: 150px;
+    font-size: 15px;
+}
+.logo{
+    height: 20px;
+}
+.liste-media{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.liste-media-li{
+    margin-left: 2px;
+    float: right;
+}
+.liste-media-a{
+    display:block;
+    float: right;      
+    width:30px;
+    padding:5px;
+ }
+/*
+#LogoContact{
+    object-position: right;
+}
+*/
+/* Style the navigation bar using a navbar css generator */
+
+.navbar-custom {
+  font-size: 30px;
+    
+    
+  background-color: #0d222b;
+  border-color: #050e12;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#194152), to(#0d222b));
+  background-image: -webkit-linear-gradient(top, #194152, 0%, #0d222b, 100%);
+  background-image: -moz-linear-gradient(top, #194152 0%, #0d222b 100%);
+  background-image: linear-gradient(to bottom, #194152 0%, #0d222b 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff194152', endColorstr='#ff0d222b', GradientType=0);
+}
+.navbar-custom .navbar-brand {
+  color: #c0c0c0;
+    font-size: 30px;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #a7a7a7;
+  background-color: transparent;
+}
+.navbar-custom .navbar-text {
+  color: #c0c0c0;
+}
+.navbar-custom .navbar-nav > li:last-child > a {
+  border-right: 1px solid #050e12;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #c0c0c0;
+  border-left: 1px solid #050e12;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #ffffff f;
+  background-color: transparent;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #ffffff f;
+  background-color: #050e12;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#050e12), to(#112d39));
+  background-image: -webkit-linear-gradient(top, #050e12, 0%, #112d39, 100%);
+  background-image: -moz-linear-gradient(top, #050e12 0%, #112d39 100%);
+  background-image: linear-gradient(to bottom, #050e12 0%, #112d39 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff050e12', endColorstr='#ff112d39', GradientType=0);
+}
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+  color: #cccccc;
+  background-color: transparent;
+}
+.navbar-custom .navbar-toggle {
+  border-color: #dddddd;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #dddddd;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #cccccc;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+  border-color: #050c10;
+}
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #ffffff f;
+  border-bottom-color: #ffffff f;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  background-color: #050e12;
+  color: #ffffff f;
+}
+.navbar-custom .navbar-nav > .open > a .caret,
+.navbar-custom .navbar-nav > .open > a:hover .caret,
+.navbar-custom .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff f;
+  border-bottom-color: #ffffff f;
+}
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+  border-top-color: #c0c0c0;
+  border-bottom-color: #c0c0c0;
+}
+@media (max-width: 767) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #c0c0c0;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff f;
+    background-color: transparent;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff f;
+    background-color: #050e12;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #cccccc;
+    background-color: transparent;
+  }
+}
+.navbar-custom .navbar-link {
+  color: #c0c0c0;
+}
+.navbar-custom .navbar-link:hover {
+  color: #ffffff f;
+}
+
+
+/*highlight*/
+.highlight-container, .highlight {
+    position: relative;
+}
+.highlight-container {
+    display: inline-block;
+}
+.highlight-container:before {
+  content: " ";
+  display: block;
+  height: 90%;
+  width: 100%;
+  margin-left: -3px;
+  margin-right: -3px;
+  position: absolute;
+  background-color: black;
+  transform: rotate(2deg);
+  top: -1px;
+  left: -1px;
+  border-radius: 20% 25% 20% 24%;
+  padding: 10px 3px 3px 10px;
+}
